@@ -1,4 +1,4 @@
-class Animal:
+seclass Animal:
     def __init__(self, nome):
         self.nome = nome
     def emitir_som(self):
@@ -54,3 +54,26 @@ meu_carro.exibir_info()
 print("-" * 20)
 carro_do_vizinho.exibir_info()
 
+
+
+class Pessoa:
+    # O método __init__ é onde definimos as características (atributos)
+    def __init__(self, nome, idade, profissao):
+        self.nome = nome
+        self.idade = idade
+        self.profissao = profissao
+
+    # Um método para a pessoa se apresentar
+    def apresentar(self):
+        print(f"Olá! Meu nome é {self.nome}, tenho {self.idade} anos e sou {self.profissao}.")
+
+# Criando "objetos" (pessoas específicas) a partir da classe
+pessoa1 = Pessoa("Ana", 28, "Engenheira")
+pessoa2 = Pessoa("Carlos", 35, "Professor")
+
+# Usando as características
+pessoa1.apresentar()
+pessoa2.apresentar()
+
+# Acessando uma característica específica
+print(f"A profissão da Ana é {pessoa1.profissao}.")
