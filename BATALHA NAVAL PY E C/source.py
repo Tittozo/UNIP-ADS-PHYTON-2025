@@ -1,5 +1,22 @@
 #Programação Orientada a Objetos - Batalha Naval em PYTHON
 
+#Programação Orientada a Objetos - Batalha Naval em PYTHON
+import ctypes
+import os
+
+#INTEGRANDO COM A LINGUAGEM C
+
+try:
+    lib_path = os.path.abspath('logic.dll')
+    batalha_lib = ctypes.CDLL(lib_path)
+
+    batalha_lib.verificar_ataque.argtypes = [ctypes.c_int, ctypes.c_int]
+    batalha_lib.verificar_ataque.restype = ctypes.c_int
+except:
+    print('Não foi possivel carregar a biblioteca C. Continuando apenas com Python.')
+
+
+
 class Navio:
     def __init__ (self, nome, tamanho, posicoes):
         self.nome = nome
@@ -62,6 +79,7 @@ class JogoBatalhaNaval:
                 self.tabuleiro.atacar(x, y)
             except ValueError:
                 print('Por favor, insira coordenada válidas!')
+                continue
             if all(navio.hits == navio.tamanho for navio in self.tabuleiro.navios):
                 print('Parabéns! Todos os navios foram afundados!')
                 self.jogando = False
