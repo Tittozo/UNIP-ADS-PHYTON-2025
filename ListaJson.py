@@ -111,3 +111,27 @@ if __name__ == "__main__":
 # quando o script é chamado diretamente.
 if __name__ == "__main__":
     main()
+
+import json
+
+# 1. Criando um dicionário (objeto Python)
+dados_usuario = {
+    "nome": "Carlos Silva",
+    "idade": 28,
+    "estudante": True,
+    "habilidades": ["Python", "C", "Data Science"]
+}
+
+# 2. Convertendo Dicionário para JSON (String)
+# O parâmetro 'indent' deixa o texto bonito para leitura humana
+json_string = json.dumps(dados_usuario, indent=4, ensure_ascii=False)
+
+print("--- String JSON Gerada ---")
+print(json_string)
+
+# 3. Convertendo JSON de volta para Dicionário Python
+dados_recebidos = json.loads(json_string)
+
+print("\n--- Acessando dados do Dicionário ---")
+print(f"Nome: {dados_recebidos['nome']}")
+print(f"Primeira habilidade: {dados_recebidos['habilidades'][0]}")
