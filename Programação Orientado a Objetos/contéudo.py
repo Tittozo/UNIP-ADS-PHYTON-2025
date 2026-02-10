@@ -77,3 +77,30 @@ pessoa2.apresentar()
 
 # Acessando uma característica específica
 print(f"A profissão da Ana é {pessoa1.profissao}.")
+
+class PedidoPesqueiro:
+    def __init__(self, item, valor):
+        self.item = item
+        self.valor = valor
+        self.status = "Pendente"
+
+    def entregar_pedido(self):
+        self.status = "Entregue"
+        print(f"✅ O item '{self.item}' foi entregue na mesa!")
+
+    def exibir_resumo(self):
+        print(f"📋 Pedido: {self.item} | Valor: R$ {self.valor:.2f} | Status: {self.status}")
+
+# --- Usando o código ---
+
+# Criando (instanciando) um pedido
+pedido01 = PedidoPesqueiro("Tilápia Porção Familiar", 85.90)
+
+# Verificando o que foi pedido
+pedido01.exibir_resumo()
+
+# Garçom entrega o pedido
+pedido01.entregar_pedido()
+
+# Verificando o status atualizado
+pedido01.exibir_resumo()
