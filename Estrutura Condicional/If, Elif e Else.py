@@ -314,6 +314,16 @@ else:
 print("\nVerificação finalizada.")
 
 
+# Definimos a temperatura atual da CPU
+temperatura = 85
+
+# O 'if' verifica se a condição é verdadeira
+if temperatura > 80:
+    print("⚠️ Alerta: CPU superaquecida! Chame a Antunes Tech.")
+# O 'else' é o caminho seguido se a condição for falsa
+else:
+    print("✅ Temperatura normal. O sistema está estável.")
+
 
 
 
