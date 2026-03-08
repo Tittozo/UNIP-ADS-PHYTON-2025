@@ -1,6 +1,6 @@
-# Conteúdo Em Phyton - ADS UNIP
-
+# Linguagem Phyton - ADS UNIP
 Este repositório contém materiais de estudo, exercícios e projetos desenvolvidos em Python para a disciplina de Algoritmos e Lógica de Programação e afins, no curso de Análise e Desenvolvimento de Sistemas (ADS) da UNIP.
+![UNIP](https://img.shields.io/badge/UNIP-ADS-blue?style=for-the-badge)
 
 Python é escolhido por sua sintaxe limpa e legível, o que o torna ideal para solidificar a lógica de programação, além de ser uma ferramenta poderosa para o desenvolvimento profissional.
 
